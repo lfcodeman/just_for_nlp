@@ -2,9 +2,9 @@
 class SystemConfig:
     def __init__(self):
         self.mode = ''
-        self.dataset_fold = ''
-        self.train_file = ''
-        self.dev_file = ''
+        self.dataset_fold = './example_datasets'
+        self.train_file = 'train.csv'
+        self.dev_file = 'dev.csv'
         self.use_bert = True
 
         # bert
@@ -15,14 +15,14 @@ class SystemConfig:
         self.use_bilstm = True
 
         # 微调
-        self.finetune = False
-        self.vocabs_dir = ''
+        self.fine_tuning = False
+        self.vocabs_dir = './data/example_datasets/vocabs'
 
         # 日志
-        self.log_dir = ''
+        self.log_dir = './data/log'
         # 模型运行过程的文件路径
-        self.checkpoints_dir = ''
-        self.checkpoints_name = ''
+        self.checkpoints_dir = './checkpoints'
+        self.checkpoints_name = './checkpoints/bert_bilstm_crf'
 
         # label设置
 
@@ -36,7 +36,10 @@ class SystemConfig:
 
         # 优化器
         self.optimizer = 'Adam'
-        
+
+        self.is_early_stop = True
+
+
 
 
 
